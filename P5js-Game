@@ -288,3 +288,18 @@ function mousePressed() {
   }
 }
 
+class Level{
+  constructor(currentLevel, latestLevel, maxLevel){
+    this.currentLevel = currentLevel
+    this.latestLevel = latestLevel
+    this.maxLevel = maxLevel
+  }
+  setLevel(currentLevel){
+   this.currentLevel++
+  }
+  
+  getCurrentLevel(){
+    //buat dapetin level yang dimasukin
+    return this.currentLevel
+  }
+}
