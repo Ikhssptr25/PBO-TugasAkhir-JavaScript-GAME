@@ -303,3 +303,26 @@ class Level{
     return this.currentLevel
   }
 }
+
+//Musuh item
+class Monster extends Entity {
+  constructor(x, y,life,color,effect,type) {
+    super(x,y);
+    this.pos = createVector(x, y);
+    this.r = 35;
+    this.life=life;
+    this.color=color;
+    this.effect=effect;
+    this.type=type;
+  }
+  
+  intersects(hero) {
+    return hero.pos.dist(this.pos) < hero.r + this.r*1/2;
+  }
+  
+  render() {
+    noStroke();
+    fill("Black");
+    circle(this.pos.x, this.pos.y, this.r);
+  }
+}
