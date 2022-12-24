@@ -12,3 +12,14 @@ let mulai = false;
 var w = 400;
 var h = 400;
 var border = 45;
+
+function setup() {
+  createCanvas(w, h);
+  hero = new Hero(width/2, height/2);
+  mapp = new Map(401,401);
+  monster = new Monster(random(25, width-25), random(135, height-25));
+   koin = new Koin(random(25, width-25), random(135, height-25));
+  buttons.push(new Button(130, 23, (() => hero.speed += 1), "Level +1", 10));
+  buttons.push(new Button(200, 23, (() => timer = maxTime = 180), "Time reset", 10));
+  
+}
