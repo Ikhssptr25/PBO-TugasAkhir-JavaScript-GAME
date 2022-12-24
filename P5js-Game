@@ -38,3 +38,46 @@ function draw() {
   mapp.Left();
   mapp.Middle();
   }
+
+if (keyIsPressed === true) {
+    if (keyCode === UP_ARROW) {
+      hero.moveUp();
+  } else if (keyCode === DOWN_ARROW) {
+      hero.moveDown();
+  } else if (keyCode === LEFT_ARROW) {
+      hero.moveLeft();
+  } else if (keyCode === RIGHT_ARROW) {
+      hero.moveRight();
+  }
+  }
+  
+  hero.increaseScore();
+  
+  if (monster.intersects(hero)) {
+      mapp.gameOver();
+  }
+  
+  hero.render();
+  monster.render();
+  koin.render();
+  
+  textAlign(LEFT, TOP);
+  textSize(17);
+  noStroke();
+  fill(0);
+  text("score :" , 22, 22)
+  text(score, 80, 22);
+  fill("FireBrick");
+  rect(23, 40, 100, 18);
+  fill("Orange");
+  rect(23, 40, timer * 100 / maxTime, 18);
+  for (const btn of buttons) {
+    btn.render();
+  }
+  if (mulai) {
+    timer--;
+  }
+  if (timer <= 0) {
+    mapp.gameOver();
+  }
+}
