@@ -278,4 +278,13 @@ gameOver(){
   }
 }
   
+function mousePressed() {
+  for (const btn of buttons) {
+    if (score >= round(btn.price) && btn.intersects(mouseX, mouseY)) {
+      btn.action();
+      score -= round(btn.price);
+      btn.price *= 1.08;
+    }
+  }
+}
 
