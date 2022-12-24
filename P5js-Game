@@ -218,3 +218,44 @@ class Button {
     text(this.name, this.x + this.w/2, this.y + 10);
   }
 }
+
+
+//Mengatur Border Mapnya
+class Map{
+  constructor(width, height){
+    this.width = width
+    this.height = height
+ 
+  }
+  
+  Middle(){
+     for(let i=0;i<this.width;i++){
+     rect(i,107,1,19);
+    }
+  }
+  
+  Up(){
+    for(let i=0;i<this.width;i++){
+      rect(i,0,1,19);
+    }
+  }
+  
+  Left(){
+    for(i=0;i<this.height;i++){
+      rect(0,i,19,1);
+    }
+  }
+
+  Right(){
+    for(let i=0;i<this.height;i++){
+      rect(381,i,19,1);
+    }
+  }
+
+  Down(){
+    for(let i=0;i<this.width;i++){
+      rect(i,381,1,19);
+    }
+  
+  
+  }
