@@ -187,3 +187,18 @@ class Koin  {
     circle(this.pos.x, this.pos.y, this.r);
   }
 }
+
+class Button {
+  constructor(x, y, action, name, price) {
+    this.x = x;
+    this.y = y;
+    this.w = 60;
+    this.h = 40;
+    this.action = action;
+    this.name = name;
+    this.price = price;
+  }
+  
+  intersects(x, y) {
+    return x > this.x && x < this.x+this.w && y > this.y && y < this.y+this.h;
+  }
