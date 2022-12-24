@@ -259,3 +259,23 @@ class Map{
   
   
   }
+
+gameOver(){
+  noStroke();
+  fill(0, 128);
+  rect(0, 0, width, height);
+  textAlign(CENTER, CENTER);
+  textSize(55);
+  fill('RED');
+  text("GAME OVER", width/2, height/2);
+  textSize(40);
+  fill('RED');
+  text("TRY AGAIN!",200,250);
+  textSize(20);
+  fill('Orange');
+  hero.saveScore();
+  noLoop();
+  }
+}
+  
+
