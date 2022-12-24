@@ -1,0 +1,14 @@
+let pemain;
+let hero;
+let koin;
+let monster;
+let entity;
+let mapp;
+let score = 0;
+let maxTime = 250;
+let timer = maxTime;
+let buttons = [];
+let mulai = false;
+var w = 400;
+var h = 400;
+var border = 45;
