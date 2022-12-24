@@ -81,3 +81,55 @@ if (keyIsPressed === true) {
     mapp.gameOver();
   }
 }
+
+class Entity{
+  constructor(x,y,height,width){
+      this.x = x;
+      this.y = y;
+      this.height=400;
+      this.width=400;
+  }
+  
+  attack(xdir, ydir) {
+  this.pos.x += xdir * this.speed;  
+  this.pos.y += ydir * this.speed;
+  }
+  
+    render() {
+    noStroke();
+    fill("FireBrick");
+    circle(this.pos.x, this.pos.y, this.r*2);
+  }
+  
+  moveLeft(){
+    if (this.pos.x-this.speed<border)
+      this.pos.x=border;
+    else
+      this.pos.x-=this.speed;
+      mulai = true;
+  }
+  moveRight(){
+    if (this.pos.x+this.speed>w-border)
+      this.pos.x=w-border;
+    else
+      this.pos.x+=this.speed;
+      mulai = true;
+
+  }
+  moveUp(){
+    if (this.pos.y-this.speed<border+105)
+      this.pos.y=border+105;
+    else
+      this.pos.y-=this.speed;
+      mulai = true;
+
+  }
+  moveDown(){
+    if (this.pos.y+this.speed>h-border)
+      this.pos.y=h-border;
+    else
+      this.pos.y+=this.speed;
+      mulai = true;
+
+  }
+}
