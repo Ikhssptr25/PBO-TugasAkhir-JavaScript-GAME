@@ -23,3 +23,18 @@ function setup() {
   buttons.push(new Button(200, 23, (() => timer = maxTime = 180), "Time reset", 10));
   
 }
+
+function draw() {
+  background('grey');
+  textAlign(RIGHT)
+  textSize(10)
+  fill(0);
+  fill(51);
+  for(i=0;i<401;i++){
+    
+  mapp.Up();
+  mapp.Down();
+  mapp.Right();
+  mapp.Left();
+  mapp.Middle();
+  }
