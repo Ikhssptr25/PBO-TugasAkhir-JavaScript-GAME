@@ -170,3 +170,20 @@ class Hero extends Entity{
   }
   
 }
+
+class Koin  {
+  constructor(x, y) {
+    this.pos = createVector(x, y);
+    this.r = 25;
+  }
+  
+  intersects(hero) {
+    return hero.pos.dist(this.pos) < hero.r + this.r;
+  }
+  
+  render() {
+    noStroke();
+    fill("Orange");
+    circle(this.pos.x, this.pos.y, this.r);
+  }
+}
