@@ -151,3 +151,22 @@ class Hero extends Entity{
       return this.moveUp()
       return this.moveDown()
     }
+    increaseScore(){
+    if (koin.intersects(hero)) {
+    koin.pos.set(random(25, width-26), random(135, height-26));
+    score++;
+    maxTime -= 6;
+    timer = maxTime;
+  }
+  }
+
+    calculateLife(life){
+    this.life=life
+  }
+  
+  saveScore(){
+  text("Your Score Is:",200,290);
+  text(score,275,290);
+  }
+  
+}
