@@ -133,3 +133,21 @@ class Entity{
 
   }
 }
+
+class Hero extends Entity{
+    constructor(x,y,life,score){
+    super(x,y)
+    this.pos = createVector(x, y);
+    this.r = 24;
+    this.speed = 3;
+    this.life = life;
+    this.score = score;
+    }
+    jalan(){
+      return this.move()
+      return this.moveRight()
+      return this.render()
+      return this.moveLeft()
+      return this.moveUp()
+      return this.moveDown()
+    }
