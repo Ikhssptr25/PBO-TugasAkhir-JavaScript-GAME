@@ -199,6 +199,22 @@ class Button {
     this.price = price;
   }
   
-  intersects(x, y) {
+    intersects(x, y) {
     return x > this.x && x < this.x+this.w && y > this.y && y < this.y+this.h;
   }
+
+    render() {
+    noStroke();
+    fill(255);
+    if (mouseIsPressed && this.intersects(mouseX, mouseY)) {
+      fill(238);
+    }
+    rect(this.x, this.y, this.w, this.h);
+    textAlign(CENTER, CENTER);
+    textSize(24);
+    fill(0);
+    text(round(this.price), this.x + this.w/2, this.y + this.h/2 + 5);
+    textSize(12);
+    text(this.name, this.x + this.w/2, this.y + 10);
+  }
+}
